@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Romantic Jacuzzi 1BHK Candolim | Mirashya UG10 · Airbnb Clone</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#" aria-label="Home">
+        <svg viewBox="0 0 32 32" width="32" height="32" fill="#FF385C" aria-hidden="true">
+          <path d="M16 1c2 3.6 8 12.8 8 17.7 0 4.7-3.6 8.3-8 8.3s-8-3.6-8-8.3C8 13.8 14 4.6 16 1z"/>
+        </svg>
+        <span>airbnb</span>
+      </a>
+      <button class="search-pill" aria-label="Search">
+        <span class="search-seg">Anywhere</span>
+        <span class="seg-divider"></span>
+        <span class="search-seg">Anytime</span>
+        <span class="seg-divider"></span>
+        <span class="search-seg muted">Add guests</span>
+        <span class="search-icon-btn">🔍</span>
+      </button>
+      <div class="header-actions">
+        <button class="host-link">Become a host</button>
+        <button class="globe-btn" aria-label="Language">🌐</button>
+        <button class="user-menu" aria-label="Account menu">
+          <span class="hamburger">≡</span>
+          <span class="avatar">👤</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Secondary condensed nav that becomes visible once you scroll past the title -->
+    <div class="sub-nav" id="subNav" aria-label="Section navigation">
+      <nav class="sub-nav-tabs">
+        <a href="#photosSection" class="sub-tab active">Photos</a>
+        <a href="#amenitiesSection" class="sub-tab">Amenities</a>
+        <a href="#reviews" class="sub-tab">Reviews</a>
+        <a href="#locationSection" class="sub-tab">Location</a>
+      </nav>
+      <div class="sub-nav-booking">
+        <div class="sub-nav-price"><strong>₹28,499</strong> <span class="muted">for 5 nights</span></div>
+        <div class="sub-nav-rating">★ 4.95 · <a href="#reviews" class="link-underline">19 reviews</a></div>
+        <button class="reserve-btn small">Reserve</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="listing-page">
+
+    <!-- ===================== TITLE BAR ===================== -->
+    <section class="title-bar">
+      <h1>Romantic Jacuzzi 1BHK Candolim | Mirashya UG10</h1>
+      <div class="title-bar-actions">
+        <div class="action-buttons">
+          <button class="icon-text-btn" id="shareBtn"><span class="icon">⇪</span> Share</button>
+          <button class="icon-text-btn" id="saveBtn"><span class="icon">♡</span> Save</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PHOTO GRID ===================== -->
+    <section class="gallery" id="photosSection" aria-label="Photo gallery">
+      <div class="gallery-grid" id="galleryGrid">
+        <button class="gallery-tile main-tile" data-index="0" aria-label="View photo 1">
+          <div class="ph ph-1"></div>
+        </button>
+        <button class="gallery-tile" data-index="1" aria-label="View photo 2"><div class="ph ph-2"></div></button>
+        <button class="gallery-tile" data-index="2" aria-label="View photo 3"><div class="ph ph-3"></div></button>
+        <button class="gallery-tile" data-index="3" aria-label="View photo 4"><div class="ph ph-4"></div></button>
+        <button class="gallery-tile" data-index="4" aria-label="View photo 5"><div class="ph ph-5"></div></button>
+      </div>
+      <button class="show-all-btn" id="showAllBtn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="1" width="6" height="6" stroke="currentColor" stroke-width="1.2"/><rect x="9" y="1" width="6" height="6" stroke="currentColor" stroke-width="1.2"/><rect x="1" y="9" width="6" height="6" stroke="currentColor" stroke-width="1.2"/><rect x="9" y="9" width="6" height="6" stroke="currentColor" stroke-width="1.2"/></svg>
+        Show all photos
+      </button>
+    </section>
+
+    <!-- ===================== BODY: two columns ===================== -->
+    <section class="body-grid">
+      <div class="body-main">
+
+        <div class="host-summary">
+          <div>
+            <h2>Entire serviced apartment in Candolim, India</h2>
+            <p class="muted">3 guests · 1 bedroom · 1 bed · 1 bathroom</p>
+          </div>
+          <div class="host-avatar" aria-hidden="true">M</div>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="guest-favourite-banner">
+          <div class="gf-badge" aria-hidden="true">🏅</div>
+          <div>
+            <h3>Guest favourite</h3>
+            <p class="muted">One of the most loved homes on Airbnb, according to guests</p>
+          </div>
+          <div class="gf-stats">
+            <div class="gf-stat"><span class="gf-num">4.95</span><span class="muted">Rating</span></div>
+            <div class="gf-divider"></div>
+            <div class="gf-stat"><span class="gf-num">19</span><span class="muted">Reviews</span></div>
+          </div>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="host-summary">
+          <p class="muted">Hosted by Mirashya Homes · 2 years hosting</p>
+        </div>
+
+        <hr class="divider" />
+
+        <ul class="highlights">
+          <li>
+            <span class="hl-icon">🏊</span>
+            <div><strong>Outdoor entertainment</strong><span class="muted">The pool and alfresco dining are great for summer trips.</span></div>
+          </li>
+          <li>
+            <span class="hl-icon">❄️</span>
+            <div><strong>Designed for staying cool</strong><span class="muted">Beat the heat with the A/C and ceiling fan.</span></div>
+          </li>
+          <li>
+            <span class="hl-icon">🔑</span>
+            <div><strong>Self check-in</strong><span class="muted">You can check in with the building staff.</span></div>
+          </li>
+        </ul>
+
+        <hr class="divider" />
+
+        <p class="translation-note">Some info has been automatically translated. <button class="link-underline">Show original</button></p>
+
+        <div class="description">
+          <p>🌴 Plan Your Relaxing Holiday at Amor De Goa by Mirashya Homes! ✨ Stay in this cozy 1BHK in the heart of Candolim, featuring a private jacuzzi 🛁 for the perfect unwind. Enjoy high-speed WiFi 💻, Smart TV 📺, pet-friendly comfort 🐾, and stylish interiors. Just minutes from Candolim Beach 🏖️, popular cafés, restaurants, and nightlife 🍹, it's ideal for couples seeking romance, relaxation, and a touch of luxury in North Goa. ❤️🌴</p>
+          <button class="link-underline show-more-btn">Show more</button>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="sleep-section">
+          <h3>Where you'll sleep</h3>
+          <div class="sleep-grid">
+            <div class="sleep-card">
+              <div class="sleep-icon">🛏️</div>
+              <strong>Bedroom</strong>
+              <span class="muted">1 double bed</span>
+            </div>
+            <div class="sleep-card">
+              <div class="sleep-icon">🛋️</div>
+              <strong>Living room</strong>
+              <span class="muted">1 sofa</span>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="amenities" id="amenitiesSection">
+          <h3>What this place offers</h3>
+          <ul class="amenities-grid">
+            <li>🍳 Kitchen</li>
+            <li>📶 Wifi</li>
+            <li>💻 Dedicated workspace</li>
+            <li>🅿️ Free parking on premises</li>
+            <li>🏊 Pool</li>
+            <li>🛁 Hot tub</li>
+            <li>🐾 Pets allowed</li>
+            <li>📷 Exterior security cameras on property</li>
+            <li>🟡 Carbon monoxide alarm</li>
+            <li>🚨 Smoke alarm</li>
+          </ul>
+          <button class="show-all-amenities-btn">Show all 50 amenities</button>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- ===================== REVIEWS ===================== -->
+        <div id="reviews" class="reviews">
+          <h3 class="reviews-title">
+            <span class="gf-badge sm" aria-hidden="true">🏅</span>
+            4.95 · Guest favourite
+          </h3>
+          <p class="muted">This home is a guest favourite based on ratings, reviews and reliability
+            <button class="link-underline">How reviews work</button>
+          </p>
+
+          <div class="reviews-summary-grid">
+            <div class="stars-histogram">
+              <div class="hist-row"><span>5</span><div class="bar"><div class="fill" style="width:92%"></div></div></div>
+              <div class="hist-row"><span>4</span><div class="bar"><div class="fill" style="width:6%"></div></div></div>
+              <div class="hist-row"><span>3</span><div class="bar"><div class="fill" style="width:1%"></div></div></div>
+              <div class="hist-row"><span>2</span><div class="bar"><div class="fill" style="width:0%"></div></div></div>
+              <div class="hist-row"><span>1</span><div class="bar"><div class="fill" style="width:0%"></div></div></div>
+            </div>
+            <div class="rating-bars">
+              <div class="rating-bar"><span>Cleanliness</span><div class="bar"><div class="fill" style="width:100%"></div></div><span>5.0</span></div>
+              <div class="rating-bar"><span>Accuracy</span><div class="bar"><div class="fill" style="width:100%"></div></div><span>5.0</span></div>
+              <div class="rating-bar"><span>Check-in</span><div class="bar"><div class="fill" style="width:100%"></div></div><span>5.0</span></div>
+              <div class="rating-bar"><span>Communication</span><div class="bar"><div class="fill" style="width:100%"></div></div><span>5.0</span></div>
+              <div class="rating-bar"><span>Location</span><div class="bar"><div class="fill" style="width:96%"></div></div><span>4.8</span></div>
+              <div class="rating-bar"><span>Value</span><div class="bar"><div class="fill" style="width:96%"></div></div><span>4.8</span></div>
+            </div>
+          </div>
+
+          <div class="review-tags" aria-label="Search reviews by keyword">
+            <button class="review-tag">Comfort <span class="muted">6</span></button>
+            <button class="review-tag">Accuracy <span class="muted">5</span></button>
+            <button class="review-tag">Hot tub <span class="muted">5</span></button>
+            <button class="review-tag">Condition <span class="muted">4</span></button>
+            <button class="review-tag">Hospitality <span class="muted">8</span></button>
+            <button class="review-tag">Cleanliness <span class="muted">4</span></button>
+            <button class="review-tag">Amenities <span class="muted">2</span></button>
+            <button class="review-tag">Decor <span class="muted">2</span></button>
+            <button class="review-tag">Indoor spaces <span class="muted">2</span></button>
+            <button class="review-tag">Location <span class="muted">2</span></button>
+          </div>
+
+          <div class="review-grid">
+            <article class="review-card">
+              <div class="reviewer"><span class="avatar-sm">A</span><div><strong>Amit</strong><span class="muted">2 months on Airbnb · 1 week ago</span></div></div>
+              <p>Very helpful and responsive team. Safe and peaceful stay. loved everything about the property.</p>
+            </article>
+            <article class="review-card">
+              <div class="reviewer"><span class="avatar-sm">A</span><div><strong>Aheesh</strong><span class="muted">3 years on Airbnb · 2 weeks ago</span></div></div>
+              <p>We had a wonderful stay. The apartment was clean, comfortable, and exactly as shown in the photos. The host was very responsive and helpful throughout our stay. We would definitely recommend this place and would love to stay here again.</p>
+              <button class="link-underline show-more-btn">Show more</button>
+            </article>
+            <article class="review-card">
+              <div class="reviewer"><span class="avatar-sm">S</span><div><strong>Samiksha</strong><span class="muted">8 months on Airbnb · May 2026</span></div></div>
+              <p>the host nitish was really great help</p>
+            </article>
+            <article class="review-card">
+              <div class="reviewer"><span class="avatar-sm">V</span><div><strong>Vedant</strong><span class="muted">4 years on Airbnb · May 2026</span></div></div>
+              <p>We had an amazing stay at this property in Goa! The entire home was spotless and exceptionally well-maintained, making us feel comfortable from the moment we arrived. The highlight of our stay was definitely the jacuzzi.</p>
+              <button class="link-underline show-more-btn">Show more</button>
+            </article>
+            <article class="review-card">
+              <div class="reviewer"><span class="avatar-sm">V</span><div><strong>Vaibhav S</strong><span class="muted">3 years on Airbnb · May 2026</span></div></div>
+              <p>Great great experience living out there, can't expect more, will always look for it in the future and will recommend my friends too.</p>
+            </article>
+            <article class="review-card">
+              <div class="reviewer"><span class="avatar-sm">M</span><div><strong>Mohd</strong><span class="muted">5 years on Airbnb · May 2026</span></div></div>
+              <p>Great place. Exactly as described in the listing.</p>
+            </article>
+          </div>
+          <button class="show-all-reviews-btn">Show all 19 reviews</button>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- ===================== LOCATION ===================== -->
+        <div class="location-section" id="locationSection">
+          <h3>Where you'll be</h3>
+          <div class="map-placeholder" aria-hidden="true">🗺️</div>
+          <strong>Candolim, Goa, India</strong>
+          <p class="muted">Exact location will be provided after booking.</p>
+          <h4>Neighbourhood highlights</h4>
+          <p>Located in the heart of Candolim, Amor de Goa offers a peaceful stay with easy access to beaches, cafés, and popular attractions.</p>
+          <button class="link-underline show-more-btn">Show more</button>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- ===================== MEET YOUR HOST ===================== -->
+        <div class="host-section">
+          <h3>Meet your host</h3>
+          <div class="host-card">
+            <div class="host-card-main">
+              <div class="host-avatar-lg" aria-hidden="true">M</div>
+              <strong>Mirashya Homes</strong>
+              <span class="muted">Host</span>
+            </div>
+            <div class="host-card-stats">
+              <div><strong>1,463</strong><span class="muted">Reviews</span></div>
+              <div><strong>4.68★</strong><span class="muted">Rating</span></div>
+              <div><strong>2</strong><span class="muted">Years hosting</span></div>
+            </div>
+          </div>
+          <ul class="host-facts">
+            <li>Born in the 80s</li>
+            <li>Where I went to school: NICMAR GOA</li>
+          </ul>
+          <div class="cohosts">
+            <strong>Co-Hosts</strong>
+            <div class="cohost-avatars">
+              <span class="avatar-sm">S</span><span class="avatar-sm">A</span><span class="avatar-sm">M</span>
+              <span class="avatar-sm">S</span><span class="avatar-sm">P</span><span class="avatar-sm">S</span>
+              <span class="avatar-sm">S</span><span class="avatar-sm">A</span>
+            </div>
+          </div>
+          <div class="host-details">
+            <div class="row"><span class="muted">Response rate</span><span>100%</span></div>
+            <div class="row"><span class="muted">Responds within</span><span>an hour</span></div>
+          </div>
+          <button class="show-all-amenities-btn">Message host</button>
+          <p class="muted small">To help protect your payment, always use Airbnb to send money and communicate with hosts.</p>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- ===================== THINGS TO KNOW ===================== -->
+        <div class="things-to-know">
+          <h3>Things to know</h3>
+          <div class="ttk-grid">
+            <div>
+              <h4>Cancellation policy</h4>
+              <p class="muted">Free cancellation before 17 October. Cancel before check-in on 18 October for a partial refund.</p>
+              <button class="link-underline">Review this host's full policy for details.</button>
+            </div>
+            <div>
+              <h4>House rules</h4>
+              <p class="muted">Check-in after 2:00 pm</p>
+              <p class="muted">Checkout before 11:00 am</p>
+              <p class="muted">3 guests maximum</p>
+              <button class="link-underline">Learn more</button>
+            </div>
+            <div>
+              <h4>Safety &amp; property</h4>
+              <p class="muted">Carbon monoxide alarm not reported</p>
+              <p class="muted">Smoke alarm not reported</p>
+              <p class="muted">Exterior security cameras on property</p>
+              <button class="link-underline">Learn more</button>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- ===================== MORE STAYS NEARBY ===================== -->
+        <div class="nearby-section">
+          <h3>More stays nearby</h3>
+          <div class="nearby-grid">
+            <article class="nearby-card">
+              <div class="ph ph-6"></div>
+              <strong>Beautiful Studio with a view to die for</strong>
+              <span>₹23,600 <span class="muted">· ★ 4.91</span></span>
+            </article>
+            <article class="nearby-card">
+              <div class="ph ph-7"></div>
+              <strong>NAQAB - 1bhk with private pool</strong>
+              <span>₹42,218 <span class="muted">· ★ 4.95</span></span>
+            </article>
+            <article class="nearby-card">
+              <div class="ph ph-8"></div>
+              <strong>Greentique Luxury Flat with plunge pool, Calangute</strong>
+              <span>₹44,900 <span class="muted">· ★ 4.90</span></span>
+            </article>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===================== BOOKING WIDGET ===================== -->
+      <aside class="booking-card" aria-label="Booking">
+        <div class="booking-card-inner">
+          <div class="price-row">
+            <span class="price">₹28,499</span> <span class="muted">for 5 nights</span>
+            <span class="rating-inline">★ 4.95</span>
+          </div>
+          <div class="date-grid">
+            <div class="date-field"><label>CHECK-IN</label><span>18/10/2026</span></div>
+            <div class="date-field"><label>CHECKOUT</label><span>23/10/2026</span></div>
+            <div class="guest-field"><label>GUESTS</label><span>2 guests</span></div>
+          </div>
+
+          <div class="mini-calendar" aria-label="5 nights in Candolim">
+            <p class="mini-cal-title">5 nights in Candolim</p>
+            <p class="muted mini-cal-range">18 Oct 2026 – 23 Oct 2026</p>
+            <div class="mini-cal-months">
+              <div class="mini-cal-month">
+                <strong>October 2026</strong>
+                <div class="mini-cal-grid">
+                  <span class="dow">S</span><span class="dow">M</span><span class="dow">T</span><span class="dow">W</span><span class="dow">T</span><span class="dow">F</span><span class="dow">S</span>
+                </div>
+              </div>
+              <div class="mini-cal-month">
+                <strong>November 2026</strong>
+                <div class="mini-cal-grid">
+                  <span class="dow">S</span><span class="dow">M</span><span class="dow">T</span><span class="dow">W</span><span class="dow">T</span><span class="dow">F</span><span class="dow">S</span>
+                </div>
+              </div>
+            </div>
+            <button class="link-underline clear-dates-btn">Clear dates</button>
+          </div>
+
+          <button class="reserve-btn">Reserve</button>
+          <p class="muted center">You won't be charged yet</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- ===================== PHOTO TOUR (full-screen gallery) ===================== -->
+  <div class="photo-tour" id="photoTour" role="dialog" aria-modal="true" aria-label="Photo tour" hidden>
+    <div class="photo-tour-header">
+      <button class="ptour-close" id="ptourClose" aria-label="Close photo tour">✕</button>
+      <div class="ptour-title">Romantic Jacuzzi 1BHK Candolim | Mirashya UG10</div>
+      <div class="ptour-actions">
+        <button class="icon-text-btn" id="ptourShare"><span class="icon">⇪</span> Share</button>
+        <button class="icon-text-btn" id="ptourSave"><span class="icon">♡</span> Save</button>
+      </div>
+    </div>
+    <div class="ptour-body" id="ptourBody">
+      <!-- photo rows injected by JS -->
+    </div>
+  </div>
+
+  <!-- ===================== LIGHTBOX (single-photo viewer) ===================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <div class="lb-counter" id="lbCounter">1 / 12</div>
+    <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Previous photo">‹</button>
+    <div class="lb-stage">
+      <div class="lb-image" id="lbImage"></div>
+    </div>
+    <button class="lb-arrow lb-next" id="lbNext" aria-label="Next photo">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
