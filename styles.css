@@ -1,0 +1,346 @@
+:root{
+  --airbnb-red:#FF385C;
+  --airbnb-red-dark:#E31C5F;
+  --text:#222222;
+  --muted:#6a6a6a;
+  --border:#DDDDDD;
+  --radius-lg:12px;
+  --radius-md:8px;
+  --max-width:1120px;
+  --shadow-1: 0 1px 2px rgba(0,0,0,.08);
+  --shadow-card: 0 6px 16px rgba(0,0,0,.12);
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  font-family: "Circular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+button{font-family:inherit;cursor:pointer;background:none;border:none;color:inherit;}
+a{color:inherit;text-decoration:none;}
+.muted{color:var(--muted);}
+.dot{color:var(--muted);}
+.link-underline{text-decoration:underline;font-weight:600;}
+.divider{border:none;border-top:1px solid var(--border);margin:32px 0;}
+
+/* ===================== HEADER ===================== */
+.site-header{
+  border-bottom:1px solid var(--border);
+  position:sticky; top:0; background:#fff; z-index:40;
+}
+.header-inner{
+  max-width:1440px; margin:0 auto; padding:20px 40px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.logo{display:flex; align-items:center; gap:8px; color:var(--airbnb-red); font-weight:800; font-size:22px;}
+.header-nav{display:flex; gap:8px;}
+.nav-tab{padding:8px 12px; border-radius:24px; font-weight:600; color:var(--muted); transition:background .15s ease, color .15s ease;}
+.nav-tab.active{color:var(--text);}
+.nav-tab:hover{background:#f7f7f7;}
+.header-actions{display:flex; align-items:center; gap:8px;}
+.host-link{padding:12px; border-radius:24px; font-weight:600; transition:background .15s ease;}
+.host-link:hover{background:#f7f7f7;}
+.globe-btn{padding:12px; border-radius:50%; transition:background .15s ease;}
+.globe-btn:hover{background:#f7f7f7;}
+.user-menu{
+  display:flex; align-items:center; gap:8px;
+  border:1px solid var(--border); border-radius:24px; padding:6px 8px;
+  box-shadow:var(--shadow-1); transition:box-shadow .2s ease;
+}
+.user-menu:hover{box-shadow:0 2px 8px rgba(0,0,0,.18);}
+.avatar{background:#717171; color:#fff; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-size:14px;}
+
+/* ===================== PAGE LAYOUT ===================== */
+.listing-page{max-width:var(--max-width); margin:0 auto; padding:32px 24px 80px;}
+
+/* ===================== TITLE BAR ===================== */
+.title-bar{display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:24px; gap:16px; flex-wrap:wrap;}
+.title-bar h1{font-size:26px; margin:0 0 8px;}
+.rating-row{display:flex; align-items:center; gap:6px; font-size:14px; flex-wrap:wrap;}
+.stars{font-weight:600;}
+.action-buttons{display:flex; gap:8px; margin-top:8px;}
+.icon-text-btn{display:flex; align-items:center; gap:6px; padding:8px 12px; border-radius:8px; font-weight:600; font-size:14px; text-decoration:underline; transition:background .15s ease;}
+.icon-text-btn:hover{background:#f7f7f7;}
+.icon{font-size:16px;}
+
+/* ===================== GALLERY GRID ===================== */
+.gallery{position:relative; margin-bottom:40px;}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  grid-template-rows:repeat(2, 130px);
+  gap:8px;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+}
+.gallery-tile{position:relative; overflow:hidden; padding:0;}
+.gallery-tile .ph{width:100%; height:100%; transition:transform .35s ease; background-size:cover;}
+.gallery-tile:hover .ph{transform:scale(1.05);}
+.main-tile{grid-row:1 / span 2; grid-column:1 / span 2;}
+.gallery-grid .ph-1{background:linear-gradient(135deg,#e8c39e,#c17a4f);}
+.gallery-grid .ph-2{background:linear-gradient(135deg,#cfd9df,#8fa3ad);}
+.gallery-grid .ph-3{background:linear-gradient(135deg,#f6d365,#c98a3f);}
+.gallery-grid .ph-4{background:linear-gradient(135deg,#a1c4fd,#5b7fc7);}
+.gallery-grid .ph-5{background:linear-gradient(135deg,#d4a5a5,#8a5a5a);}
+.show-all-btn{
+  position:absolute; right:20px; bottom:20px;
+  display:flex; align-items:center; gap:8px;
+  background:#fff; border:1px solid var(--text); border-radius:8px;
+  padding:8px 12px; font-weight:600; font-size:14px;
+  box-shadow:var(--shadow-1);
+  transition:transform .1s ease;
+}
+.show-all-btn:hover{transform:scale(1.03);}
+
+/* ===================== BODY GRID ===================== */
+.body-grid{display:grid; grid-template-columns:1fr 380px; gap:80px; align-items:start;}
+.host-summary{display:flex; align-items:center; justify-content:space-between;}
+.host-summary h2{font-size:22px; margin:0 0 4px;}
+.host-avatar{width:56px; height:56px; border-radius:50%; background:#717171; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:20px;}
+
+.highlights{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:24px;}
+.highlights li{display:flex; gap:16px; align-items:flex-start;}
+.highlights li div{display:flex; flex-direction:column; gap:4px; font-size:14px;}
+.hl-icon{font-size:24px;}
+
+.description p{line-height:1.6; font-size:16px;}
+.show-more-btn{font-size:15px;}
+
+.amenities h3{font-size:20px; margin-bottom:16px;}
+.amenities-grid{list-style:none; margin:0 0 24px; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:18px; font-size:15px;}
+.show-all-amenities-btn{
+  border:1px solid var(--text); border-radius:8px; padding:12px 20px; font-weight:600; font-size:14px;
+  transition:background .15s ease;
+}
+.show-all-amenities-btn:hover{background:#f7f7f7;}
+
+.reviews-title{font-size:20px; margin-bottom:20px;}
+.rating-bars{display:grid; grid-template-columns:1fr 1fr; gap:16px 40px; margin-bottom:32px;}
+.rating-bar{display:grid; grid-template-columns:90px 1fr 24px; align-items:center; gap:10px; font-size:13px;}
+.bar{height:4px; background:#DDDDDD; border-radius:2px; overflow:hidden;}
+.fill{height:100%; background:var(--text);}
+.review-grid{display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-bottom:24px;}
+.review-card p{font-size:14px; line-height:1.5; margin:8px 0 0;}
+.reviewer{display:flex; align-items:center; gap:12px;}
+.avatar-sm{width:44px; height:44px; border-radius:50%; background:#717171; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700;}
+.reviewer div{display:flex; flex-direction:column; font-size:13px;}
+.show-all-reviews-btn{
+  border:1px solid var(--text); border-radius:8px; padding:12px 20px; font-weight:600; font-size:14px;
+  transition:background .15s ease;
+}
+.show-all-reviews-btn:hover{background:#f7f7f7;}
+
+/* ===================== BOOKING CARD ===================== */
+.booking-card{position:sticky; top:100px;}
+.booking-card-inner{
+  border:1px solid var(--border); border-radius:var(--radius-lg); padding:24px;
+  box-shadow:var(--shadow-card);
+}
+.price-row{display:flex; align-items:baseline; gap:6px; font-size:22px; margin-bottom:16px; position:relative;}
+.price{font-weight:700;}
+.rating-inline{position:absolute; right:0; font-size:14px; font-weight:600;}
+.date-grid{border:1px solid var(--border); border-radius:8px; overflow:hidden; margin-bottom:16px;}
+.date-field{display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid var(--border); padding:8px 12px;}
+.date-field label{grid-column:1/-1; font-size:10px; font-weight:700; letter-spacing:.2px;}
+.date-field span{grid-column:1/-1; font-size:14px;}
+.guest-field{padding:8px 12px;}
+.guest-field label{display:block; font-size:10px; font-weight:700;}
+.reserve-btn{
+  width:100%; padding:14px; border-radius:8px; font-weight:700; font-size:16px; color:#fff;
+  background:linear-gradient(to right, var(--airbnb-red), var(--airbnb-red-dark));
+  transition:filter .15s ease;
+}
+.reserve-btn:hover{filter:brightness(0.92);}
+.center{text-align:center; font-size:13px; margin:12px 0;}
+.price-breakdown{display:flex; flex-direction:column; gap:14px; font-size:14px; margin-top:16px;}
+.row{display:flex; justify-content:space-between;}
+.row.total{font-weight:700;}
+
+/* ===================== FOCUS STATES (a11y) ===================== */
+a:focus-visible, button:focus-visible{
+  outline:2px solid var(--text); outline-offset:2px; border-radius:4px;
+}
+
+/* ===================== PHOTO TOUR ===================== */
+.photo-tour{
+  position:fixed; inset:0; background:#fff; z-index:100; overflow-y:auto;
+  animation:fadeIn .25s ease;
+}
+@keyframes fadeIn{from{opacity:0;} to{opacity:1;}}
+.photo-tour-header{
+  position:sticky; top:0; background:#fff; z-index:5;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:20px 40px; border-bottom:1px solid var(--border);
+}
+.ptour-close{font-size:20px; width:40px; height:40px; border-radius:50%; transition:background .15s ease;}
+.ptour-close:hover{background:#f0f0f0;}
+.ptour-title{font-weight:600; font-size:16px;}
+.ptour-actions{display:flex; gap:8px;}
+.ptour-body{
+  max-width:900px; margin:0 auto; padding:24px 40px 80px;
+  display:flex; flex-direction:column; gap:8px;
+}
+.ptour-row{display:grid; gap:8px;}
+.ptour-row.single{grid-template-columns:1fr;}
+.ptour-row.pair{grid-template-columns:1fr 1fr;}
+.ptour-photo{
+  border-radius:12px; overflow:hidden; cursor:pointer; border:none; padding:0;
+  aspect-ratio:4/3; background-size:cover;
+  transition:opacity .15s ease;
+}
+.ptour-photo:hover{opacity:.9;}
+
+/* ===================== LIGHTBOX ===================== */
+.lightbox{
+  position:fixed; inset:0; background:rgba(0,0,0,.92); z-index:200;
+  display:flex; align-items:center; justify-content:center;
+  animation:fadeIn .2s ease;
+}
+.lb-close{
+  position:absolute; top:20px; left:24px; color:#fff; font-size:20px;
+  width:40px; height:40px; border-radius:50%; transition:background .15s ease;
+}
+.lb-close:hover{background:rgba(255,255,255,.15);}
+.lb-counter{position:absolute; top:28px; right:32px; color:#fff; font-size:14px; font-weight:600;}
+.lb-arrow{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:48px; height:48px; border-radius:50%; background:rgba(255,255,255,.9);
+  font-size:26px; display:flex; align-items:center; justify-content:center;
+  transition:transform .12s ease, background .15s ease;
+}
+.lb-arrow:hover{background:#fff; transform:translateY(-50%) scale(1.08);}
+.lb-prev{left:24px;}
+.lb-next{right:24px;}
+.lb-stage{width:80vw; max-width:1100px; height:80vh; display:flex; align-items:center; justify-content:center;}
+.lb-image{
+  width:100%; height:100%; background-size:contain; background-position:center; background-repeat:no-repeat;
+  animation:zoomIn .18s ease;
+}
+@keyframes zoomIn{from{opacity:0; transform:scale(.98);} to{opacity:1; transform:scale(1);}}
+
+[hidden]{display:none !important;}
+
+/* ===================== SEARCH PILL (header) ===================== */
+.search-pill{
+  display:flex; align-items:center; border:1px solid var(--border); border-radius:32px;
+  box-shadow:var(--shadow-1); padding:6px; gap:0; transition:box-shadow .2s ease;
+}
+.search-pill:hover{box-shadow:0 2px 8px rgba(0,0,0,.18);}
+.search-seg{padding:10px 20px; font-size:14px; font-weight:600;}
+.seg-divider{width:1px; height:24px; background:var(--border);}
+.search-icon-btn{
+  background:var(--airbnb-red); color:#fff; width:32px; height:32px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center; margin-left:4px; font-size:13px;
+}
+
+/* ===================== SUB NAV (sticky section tabs + condensed booking) ===================== */
+.sub-nav{
+  max-width:1440px; margin:0 auto; padding:0 40px;
+  display:flex; align-items:center; justify-content:space-between;
+  border-top:1px solid var(--border);
+}
+.sub-nav-tabs{display:flex; gap:32px;}
+.sub-tab{padding:20px 0; font-size:14px; font-weight:600; color:var(--muted); border-bottom:2px solid transparent;}
+.sub-tab.active, .sub-tab:hover{color:var(--text); border-bottom-color:var(--text);}
+.sub-nav-booking{display:flex; align-items:center; gap:16px; font-size:14px;}
+.reserve-btn.small{width:auto; padding:10px 24px; font-size:14px;}
+
+/* ===================== GUEST FAVOURITE BANNER ===================== */
+.guest-favourite-banner{
+  display:flex; align-items:center; gap:20px; background:#fff; border:1px solid var(--border);
+  border-radius:var(--radius-lg); padding:20px;
+}
+.guest-favourite-banner h3{margin:0 0 4px; font-size:16px;}
+.guest-favourite-banner p{margin:0; font-size:13px;}
+.gf-badge{font-size:28px;}
+.gf-badge.sm{font-size:18px;}
+.gf-stats{display:flex; align-items:center; gap:16px; margin-left:auto; text-align:center;}
+.gf-stat{display:flex; flex-direction:column; font-size:12px;}
+.gf-num{font-size:18px; font-weight:700;}
+.gf-divider{width:1px; height:32px; background:var(--border);}
+
+/* ===================== TRANSLATION NOTE ===================== */
+.translation-note{font-size:14px; margin-bottom:16px;}
+
+/* ===================== WHERE YOU'LL SLEEP ===================== */
+.sleep-section h3{font-size:20px; margin-bottom:16px;}
+.sleep-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+.sleep-card{
+  border:1px solid var(--border); border-radius:var(--radius-md); padding:20px;
+  display:flex; flex-direction:column; gap:6px; transition:box-shadow .15s ease;
+}
+.sleep-card:hover{box-shadow:var(--shadow-1);}
+.sleep-icon{font-size:22px;}
+
+/* ===================== REVIEWS SUMMARY ===================== */
+.reviews-title{display:flex; align-items:center; gap:8px; font-size:22px; margin-bottom:4px;}
+.reviews-summary-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px; margin:24px 0;}
+.stars-histogram{display:flex; flex-direction:column; gap:8px;}
+.hist-row{display:grid; grid-template-columns:12px 1fr; align-items:center; gap:10px; font-size:12px;}
+.review-tags{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px;}
+.review-tag{
+  border:1px solid var(--border); border-radius:20px; padding:8px 14px; font-size:13px; font-weight:600;
+  display:flex; gap:6px; transition:border-color .15s ease, background .15s ease;
+}
+.review-tag:hover{background:#f7f7f7; border-color:var(--text);}
+
+/* ===================== LOCATION ===================== */
+.location-section h3{font-size:20px; margin-bottom:16px;}
+.location-section h4{font-size:16px; margin:20px 0 8px;}
+.map-placeholder{
+  height:280px; border-radius:var(--radius-lg); background:#eef1f4; border:1px solid var(--border);
+  display:flex; align-items:center; justify-content:center; font-size:40px; margin-bottom:16px;
+}
+
+/* ===================== HOST SECTION ===================== */
+.host-section h3{font-size:20px; margin-bottom:16px;}
+.host-card{
+  display:flex; align-items:center; justify-content:space-between; gap:24px;
+  border:1px solid var(--border); border-radius:var(--radius-lg); padding:24px; margin-bottom:16px;
+}
+.host-card-main{display:flex; flex-direction:column; align-items:center; gap:4px; text-align:center;}
+.host-avatar-lg{width:64px; height:64px; border-radius:50%; background:#717171; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:24px;}
+.host-card-stats{display:flex; gap:24px;}
+.host-card-stats div{display:flex; flex-direction:column; text-align:center; font-size:13px;}
+.host-card-stats strong{font-size:18px;}
+.host-facts{list-style:none; margin:0 0 16px; padding:0; display:flex; flex-direction:column; gap:8px; font-size:14px;}
+.cohosts{margin-bottom:16px;}
+.cohost-avatars{display:flex; gap:8px; margin-top:8px; flex-wrap:wrap;}
+.host-details{display:flex; flex-direction:column; gap:8px; font-size:14px; margin-bottom:16px;}
+.host-details .row{display:flex; justify-content:space-between; max-width:300px;}
+.muted.small{font-size:12px; margin-top:12px;}
+
+/* ===================== THINGS TO KNOW ===================== */
+.things-to-know h3{font-size:20px; margin-bottom:16px;}
+.ttk-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:32px;}
+.ttk-grid h4{font-size:15px; margin:0 0 8px;}
+.ttk-grid p{font-size:13px; margin:0 0 4px;}
+.ttk-grid button{font-size:13px; margin-top:8px;}
+
+/* ===================== NEARBY LISTINGS ===================== */
+.nearby-section h3{font-size:20px; margin-bottom:16px;}
+.nearby-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;}
+.nearby-card{display:flex; flex-direction:column; gap:6px; cursor:pointer;}
+.nearby-card .ph{width:100%; aspect-ratio:1/1; border-radius:var(--radius-md); transition:transform .3s ease;}
+.nearby-card:hover .ph{transform:scale(1.03);}
+.nearby-card strong{font-size:14px;}
+.nearby-card span{font-size:13px;}
+.nearby-card .ph-6{background:linear-gradient(135deg,#fbc2eb,#a6c1ee);}
+.nearby-card .ph-7{background:linear-gradient(135deg,#84fab0,#8fd3f4);}
+.nearby-card .ph-8{background:linear-gradient(135deg,#f6d365,#fda085);}
+
+/* ===================== MINI CALENDAR (booking card) ===================== */
+.mini-calendar{border-top:1px solid var(--border); margin-top:8px; padding-top:16px;}
+.mini-cal-title{font-weight:600; font-size:14px; margin:0;}
+.mini-cal-range{font-size:13px; margin:2px 0 12px;}
+.mini-cal-months{display:grid; grid-template-columns:1fr 1fr; gap:16px; font-size:11px;}
+.mini-cal-month strong{display:block; margin-bottom:6px; font-size:12px;}
+.mini-cal-grid{display:grid; grid-template-columns:repeat(7, 1fr); gap:2px; text-align:center; color:var(--muted);}
+.clear-dates-btn{font-size:13px; margin-top:12px;}
+
+/* ===================== RESPONSIVE (desktop-focused, light fallback) ===================== */
+@media (max-width: 1024px){
+  .body-grid{grid-template-columns:1fr;}
+  .booking-card{position:static;}
+}
