@@ -1,0 +1,88 @@
+digraph Architecture {
+  rankdir=TB;
+  fontname="Helvetica";
+  graph [pad=0.4, nodesep=0.5, ranksep=0.65, splines=ortho, bgcolor="white"];
+  node [fontname="Helvetica", fontsize=11, shape=box, style="rounded,filled", fillcolor="#FFF1F3", color="#FF385C", penwidth=1.3, margin=0.18];
+  edge [fontname="Helvetica", fontsize=9, color="#888888", penwidth=1.1];
+
+  subgraph cluster_client {
+    label="Clients"; fontsize=13; color="#DDDDDD"; style="rounded"; labeljust="l";
+    web [label="Web App\n(Next.js, SSR/ISR)"];
+    mobile [label="iOS / Android\n(React Native)"];
+  }
+
+  subgraph cluster_edge {
+    label="Edge / Delivery"; fontsize=13; color="#DDDDDD"; style="rounded"; labeljust="l";
+    cdn [label="CDN + Edge Cache\n(static assets, images)"];
+    waf [label="API Gateway / WAF\n(rate limit, authN)"];
+  }
+
+  subgraph cluster_services {
+    label="Backend Services (microservices)"; fontsize=13; color="#DDDDDD"; style="rounded"; labeljust="l";
+    listing_svc [label="Listing Service"];
+    search_svc [label="Search Service"];
+    booking_svc [label="Booking / Reservation Service"];
+    payment_svc [label="Payment Service"];
+    user_svc [label="User / Host Service"];
+    review_svc [label="Reviews Service"];
+    media_svc [label="Media / Image Service"];
+    notif_svc [label="Notification Service"];
+  }
+
+  subgraph cluster_async {
+    label="Async / Messaging"; fontsize=13; color="#DDDDDD"; style="rounded"; labeljust="l";
+    queue [label="Event Bus\n(Kafka / SQS)"];
+  }
+
+  subgraph cluster_data {
+    label="Data & Storage"; fontsize=13; color="#DDDDDD"; style="rounded"; labeljust="l";
+    pg [label="Primary DB\n(Postgres, sharded)\nlistings, bookings, users"];
+    cache [label="Cache\n(Redis)"];
+    search_idx [label="Search Index\n(Elasticsearch/OpenSearch)"];
+    blob [label="Object Storage\n(S3) + Image CDN"];
+    dwh [label="Data Warehouse\n(Analytics, BI)"];
+  }
+
+  subgraph cluster_infra {
+    label="Platform / Deployment"; fontsize=13; color="#DDDDDD"; style="rounded"; labeljust="l";
+    k8s [label="Kubernetes Cluster\n(multi-region, autoscaled)"];
+    ci [label="CI/CD Pipeline\n(build, test, canary deploy)"];
+    obs [label="Observability\n(metrics, logs, tracing)"];
+  }
+
+  web -> cdn;
+  mobile -> waf;
+  cdn -> waf;
+  waf -> listing_svc;
+  waf -> search_svc;
+  waf -> booking_svc;
+  waf -> payment_svc;
+  waf -> user_svc;
+  waf -> review_svc;
+
+  listing_svc -> pg;
+  listing_svc -> cache;
+  listing_svc -> media_svc;
+  media_svc -> blob;
+  blob -> cdn [style=dashed, label="serve images"];
+
+  search_svc -> search_idx;
+  listing_svc -> queue [label="listing updated"];
+  queue -> search_idx [label="reindex"];
+
+  booking_svc -> pg;
+  booking_svc -> queue [label="booking created"];
+  queue -> notif_svc;
+  queue -> payment_svc;
+  payment_svc -> pg;
+
+  review_svc -> pg;
+  user_svc -> pg;
+
+  queue -> dwh [label="event stream"];
+  pg -> dwh [style=dashed, label="ETL"];
+
+  k8s -> listing_svc [style=invis];
+  ci -> k8s [label="deploy"];
+  k8s -> obs [style=dashed];
+}
